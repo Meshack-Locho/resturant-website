@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us</title>
+    <link rel="icon" href="meshfoodpalace images/website icon.png" type="image/icon">
+    <style>
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 200px;
+    position: relative;
+    background-color: rgb(18, 21, 31);
+}
+#header{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    gap: 50px;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(14, 13, 13);
+    color: rgb(255, 255, 255);
+    transition-duration: 3s;
+    scroll-behavior: smooth;
+}
+.navigation{
+    width: 100%;
+    display: flex;
+    height: auto;
+    padding-top: 20px;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    position: fixed;
+    top: 0;
+    z-index: 30;
+}
+.logo-area{
+    text-decoration: none;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: auto;
+}
+.logo-area h1{
+    font-size: 20px;
+}
+.logo-area img{
+    border-radius: 50%;
+}
+nav{
+    display: flex;
+    flex-wrap: wrap;
+}
+nav ul{
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    list-style: none;
+}
+nav ul li a{
+    text-decoration: none;
+    color: white;
+    font-size: 19px;
+    font-family:sans-serif;
+
+}
+.void{
+    width: 100%;
+    height: 1600px;
+    border: 1px solid white;
+}
+.font-presentation{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    gap: 0%;
+    align-items: center;
+    justify-content: center;
+    overflow-y: scroll;
+    position: fixed;
+    top: 0px;
+    background: rgb(255, 153, 0);
+    z-index: 20;
+}
+.font-presentation::-webkit-scrollbar{
+    appearance: none;
+    background-color: rgb(0, 0, 0);
+    width: 5px;
+}
+.font-presentation::-webkit-scrollbar-thumb{
+    -webkit-appearance: none;
+    background-color: rgb(5, 5, 5);
+}
+.font-presentation img{
+    object-fit: cover;
+    z-index: 10;
+}
+.plate{
+    width: 400px;
+    height: 400px;
+    border: 3px solid black;
+    border-radius: 50%;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    position: absolute;
+    opacity: 0;
+    transform: translateY(130px);
+    transition: transform 3s ease;
+}
+.plate.active{
+    opacity: 1;
+    transform: translateY(0);
+}
+.inner-plate{
+    width: 80%;
+    height: 80%;
+    margin: auto;
+    font-size: 15px;
+    border-radius: 50%;
+    border: 1px solid black;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    font-family: sans-serif;
+    text-align: center;
+}
+.descriptions-sections{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 150px;
+    overflow: hidden;
+}
+.descriptions{
+    width: 100%;
+    height: 500px;
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    transform: translateY(130px);
+    transition: all 3s ease-in-out;
+    opacity: 0;
+}
+.descriptions.active{
+    transform: translateY(0px);
+    opacity: 1;
+}
+.descriptions p{
+    width: 100%;
+    font-size: 18px;
+    font-family:'Courier New', Courier, monospace;
+    font-weight: bold;
+}
+.images{
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    width: 80%;
+    justify-content: center;
+    align-items: center;
+}
+.upper-images{
+    transform: rotate(10deg);
+}
+.lower-images{
+    transform: rotate(-10deg);
+}
+
+@media (max-width: 900px){
+    .descriptions{
+        flex-wrap: wrap;
+    }
+    .images{
+        flex-wrap: wrap;
+    }
+}
+footer{
+    width: 100%;
+    background-color: rgb(255, 153, 0);
+    height: auto;
+    padding-top: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 30px;
+    border-top-right-radius: 100%;
+    position: relative;
+    flex-wrap: wrap;
+    color: black;
+}
+footer::before{
+    content: "";
+    background-color: rgb(255, 153, 0);
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 50%;
+    height: 100%;
+    border-top-left-radius: 80%;
+}
+footer div{
+    width: 70%;
+    height: 200px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    z-index: 10;
+    color: white;
+    font-size: 18px;
+    font-family: sans-serif;
+}
+footer div a{
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    -webkit-text-stroke: 1px rgb(255, 70, 70);
+}
+
+    </style>
+</head>
+<body>
+    <div id="header">
+        <div class="navigation">
+            <a href="meshfoodpalce.html" class="logo-area">
+                <h1>MESH_FOODPALACE</h1> <img src="meshfoodpalace images/food palace logo.png" alt="meshfoodpalace logo" width="50px" height="50px"></a>
+            <nav>
+                <ul>
+                    <li><a href="meshfoodpalce.html">Home</a></li>
+                    <li><a href="contactpage.html">Contact</a></li>
+                    <li><a href="">Blog</a></li>
+                    <li><a href="">About Us</a></li>
+                </ul>
+            </nav>
+        </div>
+
+        <div class="void"></div>
+         
+        <div class="font-presentation">
+            
+            <img src="meshfoodpalace images/fork image.png" alt="fork image" width="150px" height="700px">
+            <div class="plate">
+                <h1 class="inner-plate">THANKS FOR CHOOSING MESH_FOODPALACE</h1>
+            </div>
+            <img src="meshfoodpalace images/spoon.png" alt="spoon image" width="150px" height="700px">
+        </div>
+        
+        <div class="descriptions-sections">
+            <div class="descriptions">
+                <p>Established in 1925, our hotel has a rich history that dates back nearly a century. Originally built as a luxury apartment building, the property was converted into a hotel in 1935 and has been a beloved destination for travelers ever since. Over the years, our hotel has welcomed countless guests, including celebrities, politicians, and business leaders from around the world.</p>
+                <div class="images">
+                    <img src="about page images/reception.jpg" alt="reception image" width="60%" height="50%" class="upper-images">
+                    <img src="about page images/diner.jpg" alt="dinner table with drinks" width="60%" height="50%" class="lower-images">
+                </div>
+            </div>
+            <div class="descriptions">
+                <div class="images">
+                    <img src="about page images/coffe cup.jpg" alt="coffee cup" width="60%" height="50%" class="upper-images">
+                    <img src="about page images/hotel evening.jpg" alt="hotel view in the evening" width="60%" height="50%" class="lower-images">
+                </div>
+                <p>In the early days, our hotel was known for its opulent decor and world-class service. Today, we continue to offer the same level of luxury and attention to detail that our guests have come to expect. Our historic property has been carefully renovated to preserve its original charm while incorporating modern amenities and conveniences.</p>
+            </div>
+            <div class="descriptions">
+                <p>We take great pride in our hotel's history and the role it has played in our community over the years. We look forward to continuing to welcome guests from around the world and providing them with an unforgettable experience that they will cherish for years to come.</p>
+                <div class="images">
+                    <img src="about page images/food pic for about page.jpg" alt="food picture" width="60%" height="50%" class="upper-images">
+                    <img src="about page images/waiter.jpg" alt="waiter with plate" width="60%" height="50%" class="lower-images">
+                </div>
+            </div>
+           
+        </div>
+
+        <footer>
+            <div>
+                <h3>Call now <a href="tel:+254714352684">+254714352684</a></h3>
+                <h3><a href="https://wa.me/254714352684">Chat with us <i class="fa-brands fa-whatsapp"></i></a></h3>
+                <h3><a href="">Blog</a></h3>
+                <h3><a href="">About us</a></h3>
+                <h3><a href="">Privacy Policy</a></h3>
+            </div>
+            <div>
+                <h3><a href="meshfoodpalce.html">MESH_FOODPALACE &trade;</a></h3>
+                <h3>All rights reserved</h3>
+                <h3>Copyright &copy;</h3>
+            </div>
+                <h2 style="text-align: right; width: 100%;z-index: 10;color: gold;">Designed by, Meshack Locho(MESHDEV DESIGNS)</h2>
+        </footer>
+    </div>
+
+    <script type="text/javascript">
+        let fontPresentation = document.querySelector(".font-presentation")
+        let gapSize = 0
+        let plate = document.querySelector(".plate")
+        let allDescriptions = document.querySelectorAll(".descriptions")
+        let windowHeight = window.innerHeight
+        let pointForReveal = 150 
+        window.addEventListener("scroll", ()=>{
+            console.log(window.scrollY / 16)
+            moveCutlery()
+            removeFontPresFromFixedPos()
+            revealPlate()
+            showDescriptions()
+            if (window.scrollY / 16 >= 95) {
+                fontPresentation.style.gap = "60%"
+            }
+        })
+
+        function moveCutlery() {
+            if (window.scrollY / 16 < 95){
+                fontPresentation.style.gap = (window.scrollY / 19) + "%"
+                fontPresentation.style.position = "fixed"
+                if (fontPresentation.style.gap >= "60%") {
+                    fontPresentation.style.gap = "60%"
+                }
+            }else{
+                fontPresentation.style.gap = (window.scrollY / 18) + "%"
+            }
+        }
+
+        function removeFontPresFromFixedPos() {
+            if (window.scrollY / 16 >= 93) {
+                fontPresentation.style.position = "relative"
+            }
+        }
+
+        function revealPlate() {
+            if (window.scrollY / 16 >= 30) {
+                plate.classList.add("active")
+            }else{
+                plate.classList.remove("active")
+            }
+        }
+
+        function showDescriptions() {
+            for (let i = 0; i < allDescriptions.length; i++) {
+                let topPosition = allDescriptions[i].getBoundingClientRect().top
+                
+                if (topPosition < windowHeight - pointForReveal) {
+                    allDescriptions[i].classList.add("active")
+                }else{
+                    allDescriptions[i].classList.remove("active")
+                }
+            }
+        }
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="description" content="MESH_FOODPALACE | Order food at your new food place in town">
+    <meta property="og:url" content="MESH_FOODPALACE.com">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Homepage - MESH_FOODPALACE">
+    <meta property="og:site_name" content="MESHFOODPALACE">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@meshfoodpalace">
+    <title>Meshfoodpalace</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="icon" href="meshfoodpalace images/website icon.png" type="image/icon">
+    <link rel="stylesheet" href="meshfoodpalace.css">
+</head>
+<body>
+    <div id="header">
+        <div class="navigation">
+            <a href="" class="logo-area">
+                <h1>MESH_FOODPALACE</h1> <img src="meshfoodpalace images/food palace logo.png" alt="meshfoodpalace logo" width="50px" height="50px"></a>
+            <nav>
+                <ul>
+                    <li><a href="">Home</a></li>
+                    <li><a href="contactpage.html" target="_blank">Contact</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="aboutpage.html" target="_blank">About Us</a></li>
+                    <li class="music-toggle">
+                        <label for="menu-checkbox" style="cursor: pointer;">Music <i class="fa-solid fa-music" style="color: #ffffff;text-decoration:line-through;"> <input type="checkbox" id="menu-checkbox" style="display: none;"> :</i></label>
+                        <span id="music-toggle-text">Off</span></li>
+                </ul>
+            </nav>
+            <i class="fa-solid fa-bars menu-toggle" style="color: white;font-size: 30px;cursor: pointer;"></i>
+        </div>
+
+        <div class="mobile-menu inactive">
+            <nav>
+                <ul>
+                    <li><i class="fa-solid fa-circle-xmark" style="color: white;font-size: 30px;cursor: pointer;"></i></li>
+                    <li><a href="">Home</a></li>
+                    <li><a href="contactpage.html" target="_blank">Contact</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="aboutpage.html" target="_blank">About Us</a></li>
+                    <li class="music-toggle">
+                        <label for="menu-checkbox" style="cursor: pointer;">Music <i class="fa-solid fa-music" style="color: #ffffff;text-decoration:line-through;"> <input type="checkbox" id="menu-checkbox" style="display: none;"> :</i></label>
+                        <span class="music-toggle-text">Off</span></li>
+                </ul>
+            </nav>
+        </div>
+        
+        <img src="meshfoodpalace images/header background.jpg" alt="header background image" class="header-image">
+        <div class="header-overlay"></div>
+
+        <div class="void"></div>
+    
+    <div class="header-font-big">
+        <h1>MESH_FOODPALACE, New food place in town. DINE WITH US TODAY &#127789;. With instant Delivery.</h1>
+        <div style=" display: flex; width: 100%;gap: 10px;flex-wrap: wrap;">
+            <a href="#ordering-sect">ORDER NOW</a>
+            <a href="reservations.html">RESERVATIONS</a>
+        </div>
+    </div>
+    </div>
+
+    <div class="loader inactive">
+        <div class="head">
+            <div class="eyes-part">
+                <div class="eyes"></div>
+                <div class="eyes"></div>
+            </div>
+            <div class="mouth">
+                <div class="teeth">
+                    <div class="tooth"></div>
+                    <div class="tooth"></div>
+                </div>
+                <div class="tongue"></div>
+            </div>
+        </div>
+        <h1>MESH_FOODPALACE</h1>
+    </div>
+
+    <main>
+        <section class="special-food-section">
+            <div class="special-food-overlay"></div>
+            <div class="special-food-advert">
+                <img src="meshfoodpalace images/Specials 1.png" alt="special food advertisement" width="100%" height="100%" style="z-index: 2;">
+                <button id="special-food-order">ORDER NOW Call, <a href="tel:+254714352684">0714352684</a></button>
+            </div>
+            <div class="special-foods-desc">
+                <h1>Specials for you &#127831;</h1>
+                <h3>PRICE(Per piece)</h3>
+                <p>Was: <span style="text-decoration: line-through;">KSH 360</span></p>
+                <p>Now: KSH 234 + chips</p>
+            </div> 
+        </section>
+
+        <section class="advertisement-section">
+              <video src="videos/MESH_FOODPALACE video.mp4" width="300px" height="300px" autoplay loop muted controls class="advert-video"></video>
+        </section>
+
+        <section class="foods-section" id="ordering-sect">
+
+        </section>
+
+        <div class="food-order-popup inactive">
+            
+        </div>
+        <div class="calculator inactive">
+            <h1 style="color: goldenrod;">MESH_FOODPALACE calculator</h1>
+            <input type="text" id="display">
+            <div class="buttons">
+                <button onclick= "display.value += '9'">9</button>
+                <button onclick= "display.value += '8'">8</button>
+                <button onclick= "display.value += '7'">7</button>
+                <button onclick= "display.value += '+'">+</button>
+                <button onclick= "display.value += '6'">6</button>
+                <button onclick= "display.value += '5'">5</button>
+                <button onclick= "display.value += '4'">4</button>
+                <button onclick= "display.value += '-'">-</button>
+                <button onclick= "display.value += '3'">3</button>
+                <button onclick= "display.value += '2'">2</button>
+                <button onclick= "display.value += '1'">1</button>
+                <button onclick= "display.value += '*'">*</button> 
+                <button onclick= "display.value += '0'">0</button> 
+                <button onclick= "display.value += '/'">/</button>
+                <button onclick= "display.value += '.'">.</button>
+                <button onclick= "display.value = eval(display.value)">=</button>
+                <button onclick= "display.value = ''">AC</button>
+            </div>
+            <i class="fa-solid fa-circle-xmark close-calc"></i>
+        </div>
+
+        <div class="location">
+            <div class="location-text">
+                <h3>We are Located On:</h3>
+                <h4>Kenyatta Avenue</h4>
+                <h4>00100, Nairobi</h4>
+                <h5>Tel: <a href="tel:+254714352684">+254714352684</a></h5>
+            </div>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3988.8122997385485!2d36.81436207563025!3d-1.2866891356279182!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x182f10c55202d22b%3A0x9476f14fd49cde4d!2sKenyatta%20Ave%2C%20Nairobi!5e0!3m2!1sen!2ske!4v1706279620727!5m2!1sen!2ske" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+    </main>
+
+    <a href="#header" class="back-to-top-icon inactive"><i class="fa-solid fa-angle-up"></i></a>
+   
+    <footer>
+        <div class="upper-part-footer">
+            <span class="upper-part-footer-left">
+                <h3>Call us now <a href="tel:+254714352684">+254714352684</a></h3>
+                <h3><a href="">Chat with us <i class="fa-brands fa-whatsapp"></i></a></h3>
+                <h4><a href="contactpage.html">Leave us a Message</a></h4>
+                <h4><a href="aboutpage.html">About us</a></h4>
+                <h4><a href="">Privacy Policy</a></h4>
+                <h4><a href="mailto:">Send us an Email: meshfoodpalace@gmail.com</a></h4>
+                <h4>New kid in the Block, MESH_FOODPALACE...<br> NEW IS ALWAYS BETTER</h4>
+            </span>
+
+            <img src="meshfoodpalace images/food palace logo.png" alt="logo" width="40%" height="40%" title="MESH_FOODPALACE, Restaurant" style="object-fit: contain;">
+        </div>
+        <div class="lower-part-footer">
+             <h4><a href="#header">MESH_FOODPALACE &trade;</a></h4>
+             <h4>Designed by <a href="http://127.0.0.1:5500/HTML,%20CSS,%20JAVASCRIPT%20Projects/portfolio/example.html">Meshack Locho</a> </h4>
+             <h4>All rights reserved</h4>
+             <h4>Copyright &copy;</h4>
+        </div>
+    </footer>
+    <!--Start of Tawk.to Script-->
+<script type="text/javascript">
+    var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+    (function(){
+    var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+    s1.async=true;
+    s1.src='https://embed.tawk.to/65b7b1a80ff6374032c61955/1hlaorvfj';
+    s1.charset='UTF-8';
+    s1.setAttribute('crossorigin','*');
+    s0.parentNode.insertBefore(s1,s0);
+    })();
+    </script>
+    <!--End of Tawk.to Script-->
+    <script src="meshfoodpalace.js"></script>
+</body>
+</html>

@@ -1,0 +1,642 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    gap: 100px;
+}
+#header{
+    width: 100%;
+    height: 900px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    gap: 50px;
+}
+.navigation{
+    width: 100%;
+    display: flex;
+    height: auto;
+    padding-top: 20px;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    position: fixed;
+    top: 0;
+    z-index: 10;
+}
+.mobile-menu{
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    background-color: black;
+    width: 100%;
+}
+.mobile-menu.inactive{
+    display: none;
+}
+.mobile-menu nav ul{
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    align-items: flex-start;
+    padding: 10px;
+}
+.mobile-menu li{
+    color: goldenrod;
+}
+.mobile-menu a{
+    color: goldenrod;
+}
+.logo-area{
+    text-decoration: none;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: auto;
+}
+.logo-area h1{
+    font-size: 20px;
+}
+.logo-area img{
+    border-radius: 50%;
+}
+nav{
+    display: flex;
+    flex-wrap: wrap;
+}
+nav ul{
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    list-style: none;
+}
+nav ul li a{
+    text-decoration: none;
+    color: white;
+    font-size: 19px;
+    font-family:sans-serif;
+
+}
+.music-toggle{
+    color: white;
+    font-size: 19px;
+    font-family:sans-serif;
+    cursor: pointer;
+}
+.header-image{
+    width: 100%;
+    height: 900px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    object-fit: cover;
+    animation: imageMovement 10s infinite ease-in-out alternate;
+    z-index: 5;
+}
+@keyframes imageMovement{
+    from{
+        object-position: right;
+    }
+    to{
+        object-position: left;
+    }
+}
+.header-overlay{
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-color: black;
+    width: 100%;
+    height: 900px;
+    filter: brightness(20%);
+    opacity: 0.6;
+    z-index: 5;
+}
+.void{
+    width: 100%;
+    height: 600px;
+    border: 1px solid white;
+}
+.header-font-big{
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+    gap: 20px;
+    z-index: 10;
+    color: white;
+    font-family: tahoma;
+    padding-left: 20px;
+}
+.header-font-big a{
+    text-decoration: none;
+    width: 200px;
+    background-color: transparent;
+    border: 1px solid white;
+    border-radius: 10px;
+    padding: 10px;
+    color: white;
+    text-align: center;
+    transition-duration: 2s;
+}
+.header-font-big a:hover{
+     background-color: white;
+     color: black;
+}
+.loader{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(rgb(53, 52, 52), rgb(26, 25, 25), black);
+    top: 0;
+    left: 0;
+    z-index: 40;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    align-items: center;
+    justify-content: center;
+}
+.loader.inactive{
+    display: none;
+}
+.loader h1{
+    color: goldenrod;
+    font-family: tahoma;
+}
+.head{
+    width: 300px;
+    height: 300px;
+    border: 2px solid goldenrod;
+    border-radius: 50%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+}
+.eyes-part{
+     width: 80%;
+     display: flex;
+     align-items: center;
+     justify-content: space-evenly;
+}
+.eyes{
+    width: 40px;
+    height: 40px;
+    background-color: white;
+    border-radius: 50%;
+    position: relative;
+    overflow: hidden;
+}
+.eyes::before{
+    content: "";
+    position: absolute;
+    width: 100%;
+    border-bottom: 3px solid black;
+    top: 0px;
+    left: 0px;
+    animation: paintDown 3s infinite ease-in-out alternate;
+    z-index: 10;
+    background-color: black;
+}
+@keyframes paintDown{
+    from{
+        height: 0px;
+    }
+    to{
+        height: 35px;
+    }
+}
+.eyes::after{
+    content: "";
+    position: absolute;
+    top: 20px;
+    left: 17px;
+    width: 8px;
+    height: 8px;
+    background-color: black;
+    border-radius: 50%;
+    animation: look 12s infinite linear alternate;
+}
+@keyframes look{
+    0%{
+        left: 14px;
+    }
+    50%{
+        left: 23px;
+    }
+    100%{
+        left: 17px;
+    }
+}
+.mouth{
+    width: 30%;
+    position: relative;
+    border: 2px solid black;
+    height: 30px;
+    border-radius: 0px 0px 30px 30px;
+    overflow: hidden;
+    animation: chew 1s infinite linear alternate;
+}
+.teeth{
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    gap: 5px;
+    width: 100%;
+    justify-content: center;
+    height: 100%;
+    
+}
+.tooth{
+    width: 20%;
+    height: 20px;
+    border: 1px solid black;
+    background-color: white;
+}
+.mouth::before{
+    width: 100%;
+    content: "";
+    height: 30px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: aliceblue;
+}
+.back-to-top-icon{
+    position: fixed;
+    bottom: 30px;
+    left: 30px;
+    background-color: white;
+    width: 50px;
+    height: 50px;
+    border:  2px solid goldenrod;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition-duration: 1.5s;
+    z-index: 30;
+}
+.back-to-top-icon.inactive{
+    visibility: hidden;
+}
+.back-to-top-icon:hover{
+    background-color: goldenrod;
+}
+main{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 100px;
+    align-items: center;
+}
+.special-food-section{
+    width: 100%;
+    height: auto;
+    background-image: url("meshfoodpalace images/foods/chicken wings background.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 30px;
+    overflow: hidden;
+}
+.special-food-overlay{
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-color: rgb(0, 0, 0);
+    opacity: 0.8;
+    width: 100%;
+    height: 100%;
+    filter: brightness(30%);
+    border-radius: 30px;
+}
+.special-foods-desc{
+    z-index: 2;
+    color: white;
+    font-size: 19px;
+    font-family: sans-serif;
+    line-height: 50px;
+}
+.special-food-advert{
+    width: 60%;
+    height: 600px;
+    position: relative;
+}
+#special-food-order{
+    position: absolute;
+    bottom: 27px;
+    border-radius: 20px;
+    border: none;
+    right: 0px;
+    width: 255px;
+    cursor: pointer;
+    padding: 11px;
+}
+.advertisement-section{
+    width: 100%;
+    height: 900px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 30px;
+}
+.advert-video{
+    object-fit: cover;
+    object-position: center;
+}
+@media (min-aspect-ratio: 16/9){
+    .advert-video{
+        width: 100%;
+        height: 100%;
+    }
+}
+@media (max-aspect-ratio: 16/9){
+    .advert-video{
+        width: 100%;
+        height: 100%;
+    }
+}
+.foods-section{
+    width: 90%;
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.foods{
+    max-width: 500px;
+    height: auto;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 17px;
+    justify-content: center;
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+    cursor: pointer;
+}
+.foods img{
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 10px;
+    cursor: pointer;
+    transition-duration: 2s;
+}
+.foods button{
+    background-color: black;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.food-order-popup{
+    width: 100%;
+    height: 98%;
+    position: fixed;
+    top: 10px;
+    z-index: 20;
+    margin: auto;
+    background: linear-gradient(0.25turn, rgb(12, 12, 12), rgb(56, 11, 0));
+    display: flex;
+    justify-content: space-between;
+    border-radius: 20px;
+    overflow: scroll;
+    color: goldenrod;
+    padding-top: 400px;
+}
+.food-order-popup.inactive{
+    display: none;
+}
+.food-order-popup::-webkit-scrollbar{
+    appearance: none;
+    background-color: rgb(12, 12, 12);
+    width: 5px;
+}
+.food-order-popup::-webkit-scrollbar-thumb{
+    -webkit-appearance: none;
+    background-color: rgb(14, 14, 14);
+}
+.food-order-left{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    justify-content: center;
+    font-size: 19px;
+    font-family: arial;
+}
+.food-order-left button{
+    width: 40%;
+    padding: 10px;
+    background-color: goldenrod;
+    border-radius: 10px;
+}
+.food-order-right{
+    width: 50%;
+    height: 100%;
+}
+.food-order-right img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.order-form{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 60%;
+}
+.order-form input{
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+}
+.order-form select{
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+}
+.fa-xmark{
+    font-size: 25px;
+    position: absolute;
+    left: 10px;
+    top: 10px;
+    background-color: orange;
+    color: black;
+    padding: 10px;
+    width: 50px;
+    cursor: pointer;
+}
+.calculator{
+    position: fixed;
+    top: 100px;
+    padding: 20px;
+    z-index: 20;
+    margin: auto;
+    max-width: 500px;
+    max-width: 600px;
+    background-color: rgb(0, 0, 0);
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    box-shadow: 30px 30px 30px rgba(0, 0, 0, 0.8);
+    
+}
+.calculator.inactive{
+    display: none;
+}
+.calculator input{
+    width: 85%;
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+    text-align: center;
+    font-family: cursive;
+}
+.buttons{
+    width: 90%;
+    height: 70%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+}
+.buttons button{
+    width: 20%;
+    padding: 10px;
+    background-color: goldenrod;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.close-calc{
+    position: absolute;
+    bottom: -30px;
+    color: goldenrod;
+    font-size: 30px;
+    left: 45%;
+}
+.location{
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.location-text{
+    font-size: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: goldenrod;
+}
+footer{
+    width: 100%;
+    position: relative;
+    height: auto;
+    background-color: black;
+    color: rgb(255, 255, 255);
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    font-size: 20px;
+}
+footer a{
+    color: goldenrod;
+    text-decoration: none;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+footer a:hover{
+    text-decoration: underline;
+    transform: translateX(10px);
+}
+footer div{
+    width: 100%;
+    height: auto;
+}
+.upper-part-footer{
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    height: auto;
+}
+.upper-part-footer-left{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding-left: 20px;
+}
+.lower-part-footer{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+}
+.fa-bars{
+    visibility: hidden;
+}
+@media (max-width: 900px){
+    .special-food-advert{
+        width: 100%;
+    }
+    .special-food-advert img{
+        object-fit: contain;
+    }
+    .food-order-popup{
+        flex-wrap: wrap;
+        gap: 550px;
+        padding-top: 550px;
+    }
+    .food-order-popup div{
+        width: 100%;
+    }
+    .food-order-right img{
+        object-fit: contain;
+    }
+    .advert-video{
+        object-fit: contain;
+    }
+    .advertisement-section{
+        height: 500px;
+    }
+    .navigation nav{
+        display: none;
+    }
+    .fa-bars{
+        visibility: visible;
+    }
+}

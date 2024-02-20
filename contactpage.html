@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="icon" href="meshfoodpalace images/website icon.png" type="image/icon">
+    <style>
+        *{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    gap: 200px;
+    position: relative;
+    background-color: rgb(18, 21, 31);
+}
+#header{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    gap: 50px;
+    align-items: center;
+    justify-content: center;
+}
+.navigation{
+    width: 100%;
+    display: flex;
+    height: auto;
+    padding-top: 20px;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    position: fixed;
+    top: 0;
+    z-index: 10;
+}
+.logo-area{
+    text-decoration: none;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: auto;
+}
+.logo-area h1{
+    font-size: 20px;
+}
+.logo-area img{
+    border-radius: 50%;
+}
+nav{
+    display: flex;
+    flex-wrap: wrap;
+}
+nav ul{
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    list-style: none;
+}
+nav ul li a{
+    text-decoration: none;
+    color: white;
+    font-size: 19px;
+    font-family:sans-serif;
+
+}
+.featured-section{
+    width: 80%;
+    height: 700px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.featured-section img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.featured-section-overlay{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0.7;
+    filter: brightness(10%);
+    z-index: 1;
+    color: white;
+}
+.void{
+    width: 100%;
+    height: 100px;
+    border: 1px solid white;
+}
+main{
+    width: 100%;
+    height: auto;
+    align-items: center;
+    justify-content: center;
+}
+form{
+    width: 80%;
+    height: 100%;
+    display: flex;
+    margin: auto;
+    flex-direction: column;
+    gap: 20px;
+    align-items: flex-start;
+    background: linear-gradient(0.25turn, rgb(18, 21, 31), rgb(20, 32, 71));
+    border-radius: 20px;
+    flex-wrap: wrap;
+}
+label{
+    font-size: 18px;
+    font-family:Arial, Helvetica, sans-serif;
+    color: white;
+    letter-spacing: 3px;
+}
+input{
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+}
+#submit-btn{
+    width: 30%;
+    margin: auto;
+    padding: 10px;
+    cursor: pointer;
+}
+textarea{
+    padding: 10px;
+    border-radius: 10px;
+    width: 100%;
+}
+footer{
+    width: 100%;
+    background-color: rgb(20, 32, 71);
+    height: auto;
+    padding-top: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 30px;
+    border-top-right-radius: 100%;
+    position: relative;
+    flex-wrap: wrap;
+}
+footer::before{
+    content: "";
+    background-color: rgb(20, 32, 71);
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 50%;
+    height: 100%;
+    border-top-left-radius: 80%;
+}
+footer div{
+    width: 70%;
+    height: 200px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    z-index: 10;
+    color: white;
+    font-size: 18px;
+    font-family: sans-serif;
+}
+footer div a{
+    text-decoration: none;
+    color: gold;
+}
+@media (max-width: 900px){
+    .featured-section{
+        width: 100%;
+    }
+}
+  </style>
+</head>
+<body>
+    <header id="header">
+        <div class="navigation">
+            <a href="meshfoodpalce.html" class="logo-area">
+                <h1>MESH_FOODPALACE</h1> <img src="meshfoodpalace images/food palace logo.png" alt="meshfoodpalace logo" width="50px" height="50px"></a>
+            <nav>
+                <ul>
+                    <li><a href="meshfoodpalce.html">Home</a></li>
+                    <li><a href="">Contact</a></li>
+                    <li><a href="">Blog</a></li>
+                    <li><a href="aboutpage.html">About Us</a></li>
+                </ul>
+            </nav>
+        </div>
+
+        <div class="void"></div>
+
+        <div class="featured-section">
+            <img src="meshfoodpalace images/chocolate cake.jpg" alt="chocolate cake image">
+            <div class="featured-section-overlay"></div>
+            <h1 style="position:absolute; color:white;filter: brightness(200%);z-index: 2;font-family: sans-serif;">We make the BEST, That's why we are the BEST</h1>
+        </div>
+    </header>
+
+
+    <main>
+        <form action="https://formsubmit.co/0a0f8aa3e942db6c5c538712825ba65c" method="POST">
+            <label for="name"> Enter your name</label>
+            <input type="text" name="Name" id="name" placeholder="Enter name" required>
+
+            <label for="email">Enter your Email Address</label>
+            <input type="email" name="Email" id="email" placeholder="Enter Email, eg; myemail@gmail.com" required>
+
+            <label for="phone-number">Enter your Phone Number</label>
+            <input type="tel" name="Telephone number" id="phone-number" placeholder="Enter phone number eg, +254714...">
+
+            <label for="textarea">Write something to us: </label>
+            <textarea name="Message" id="textarea" cols="60" rows="15" placeholder="Write something to us"></textarea>
+            <input type="submit" name="submit" id="submit-btn">
+        </form>
+    </main>
+
+    <footer>
+        <div>
+            <h3>Call now <a href="tel:+254714352684">+254714352684</a></h3>
+            <h3><a href="https://wa.me/254714352684">Chat with us <i class="fa-brands fa-whatsapp"></i></a></h3>
+            <h3><a href="">Blog</a></h3>
+            <h3><a href="">About us</a></h3>
+            <h3><a href="">Privacy Policy</a></h3>
+        </div>
+        <div>
+            <h3><a href="meshfoodpalce.html">MESH_FOODPALACE &trade;</a></h3>
+            <h3>All rights reserved</h3>
+            <h3>Copyright &copy;</h3>
+        </div>
+            <h2 style="text-align: right; width: 100%;z-index: 10;color: gold;">Designed by, Meshack Locho(MESHDEV DESIGNS)</h2>
+    </footer>
+
+    <script type="text/javascript">
+        let navigationBar = document.querySelector(".navigation")
+
+        window.addEventListener("scroll", ()=>{
+            if (window.scrollY >= 500) {
+                navigationBar.style.backgroundColor = "black"
+            }
+            else{
+                navigationBar.style.backgroundColor = "transparent"
+            }
+        })
+    </script>
+</body>
+</html>

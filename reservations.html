@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reservations</title>
+    <link rel="icon" href="meshfoodpalace images/website icon.png" type="image/icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+html{
+    scroll-behavior: smooth;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+body{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 100px;
+    position: relative;
+}
+#header{
+    width: 100%;
+    height: 900px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    gap: 50px;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(14, 13, 13);
+    color: rgb(255, 255, 255);
+    transition-duration: 3s;
+    scroll-behavior: smooth;
+}
+.navigation{
+    width: 100%;
+    display: flex;
+    height: auto;
+    padding-top: 20px;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    position: fixed;
+    top: 0;
+    z-index: 30;
+}
+.logo-area{
+    text-decoration: none;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: auto;
+}
+.logo-area h1{
+    font-size: 20px;
+}
+.logo-area img{
+    border-radius: 50%;
+}
+nav{
+    display: flex;
+    flex-wrap: wrap;
+}
+nav ul{
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    list-style: none;
+}
+nav ul li a{
+    text-decoration: none;
+    color: white;
+    font-size: 19px;
+    font-family:sans-serif;
+
+}
+.bg-video{
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 20;
+    background-color: rgb(255, 171, 15);
+    object-fit: cover;
+}
+.overlay{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 21;
+    background-color: rgb(0, 0, 0);
+    opacity: 70%;
+}
+.reservation-link{
+    z-index: 22;
+    width: 250px;
+    padding: 20px;
+    background-color: rgb(255, 171, 15);
+    border-radius: 20px;
+    text-decoration: none;
+    color: white;
+    font-family: sans-serif;
+    font-size: 20px;
+    position: absolute;
+    left: 0;
+    bottom: 60px;
+}
+.open-hrs{
+     width: 100%;
+     height: auto;
+}
+.open-hrs div{
+    width: 100%;
+    height: auto;
+    padding: 10px;
+    display: flex;
+    justify-content: space-evenly;
+}
+.open-hrs div h2{
+    width: 150px;
+}
+.restaurant{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    position: relative;
+    overflow: hidden;
+}
+.restaurant img{
+    width: 40%;
+    height: 300px;
+    transform: rotate(-10deg);
+    object-fit: cover;
+}
+.hotel-grid-overlay{
+    position: absolute;
+    left: 0;
+    top: -100px;
+    background-color: black;
+    opacity: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    width: 100%;
+    height: 150%;
+    font-size: 30px;
+    opacity: 0;
+    transition: opacity 2s;
+    cursor: pointer;
+    flex-direction: column;
+    gap: 30px;
+}
+.restaurant:hover .hotel-grid-overlay{
+    opacity: 0.7;
+}
+main{
+    width: 100%;
+    height: auto;
+    background-color: rgb(255, 171, 15);
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 10px;
+}
+
+form{
+    width: 50%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    font-size: 20px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+
+}
+.foods-list{
+     width: 100%;
+     height: auto;
+     display: flex;
+     flex-direction: column;
+     gap: 10px;
+}
+.foods-list div{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.foods-list label{
+    width: 80%;
+}
+input[type=checkbox]{
+    width: 20px;
+    height: 20px;
+}
+input{
+    width: 80%;
+    padding: 10px;
+    border: none;
+    border-radius: 20px;
+
+}
+textarea{
+    padding: 10px;
+    border-radius: 10px;
+}
+#submit-btn{
+    width: 40%;
+}
+.animation{
+    width: 50%;
+    height: 100%;
+    background-color: rgb(255, 171, 15);
+}
+.graphic{
+   object-fit: cover;
+   filter: contrast(150%);
+}
+@media (min-aspect-ratio: 16/9){
+    .bg-video{
+        width: 100%;
+        height: 100%;
+    }
+    .graphic{
+        width: 100%;
+        height: 100%;
+    }
+}
+@media (max-aspect-ratio: 16/9){
+    .bg-video{
+        width: 100%;
+        height: 100%;
+    }
+    .graphic{
+        width: 100%;
+        height: 100%;
+    }
+}
+@media (max-width: 900px){
+    .animation{
+        width: 100%;
+    }
+    form{
+        width: 100%;
+    }
+}
+footer{
+    width: 100%;
+    position: relative;
+    height: auto;
+    background-color: black;
+    color: rgb(255, 255, 255);
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    font-size: 20px;
+}
+footer a{
+    color: goldenrod;
+    text-decoration: none;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+footer a:hover{
+    text-decoration: underline;
+    transform: translateX(10px);
+}
+footer div{
+    width: 100%;
+    height: auto;
+}
+.upper-part-footer{
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    height: auto;
+}
+.upper-part-footer-left{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding-left: 20px;
+}
+.lower-part-footer{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+}
+    </style>
+</head>
+<body>
+    <header id="header">
+        <div class="navigation">
+            <a href="meshfoodpalce.html" class="logo-area">
+                <h1>MESH_FOODPALACE</h1> <img src="meshfoodpalace images/food palace logo.png" alt="meshfoodpalace logo" width="50px" height="50px"></a>
+            <nav>
+                <ul>
+                    <li><a href="meshfoodpalce.html">Home</a></li>
+                    <li><a href="contactpage.html">Contact</a></li>
+                    <li><a href="">Blog</a></li>
+                    <li><a href="aboutpage.html">About Us</a></li>
+                </ul>
+            </nav>
+        </div>
+        <video src="videos/MESH_FOODPALACE video.mp4" class="bg-video" loop muted autoplay></video>
+        <div class="overlay"></div>
+        <a href="#main" class="reservation-link">Make your Reservation</a>
+    </header>
+      
+    <h1 style="text-align: center; font-family: Arial, Helvetica, sans-serif;">OPEN HOURS</h1>
+    <div class="open-hrs">
+        <div><h2>Sunday</h2><span>-</span><span><h3>08:00am - 12:00am</h3></span><i class="fa-solid fa-lock" style="color: #505762;"></i></div>
+       
+       <div>
+         <h2>Monday</h2><span>-</span><span><h3>08:00am - 12:00am</h3></span><i class="fa-solid fa-lock" style="color: #61656b;"></i></div>
+
+        <div><h2>Tuesday</h2><span>-</span><span><h3>08:00am - 12:00am</h3></span><i class="fa-solid fa-lock" style="color: #61656b;"></i></div>
+
+        <div><h2>Wednesday</h2><span>-</span><span><h3>08:00am - 12:00am</h3></span><i class="fa-solid fa-lock" style="color: #61656b;"></i></div>
+
+        <div><h2>Thursday</h2><span>-</span><span><h3>08:00am - 12:00am</h3></span><i class="fa-solid fa-lock" style="color: #61656b;"></i></div>
+
+        <div><h2>Friday</h2><span>-</span><span><h3>08:00am - 12:00am</h3></span><i class="fa-solid fa-lock" style="color: #61656b;"></i></div>
+
+        <div><h2>Saturday</h2><span>-</span><span><h3>08:00am - 12:00am</h3></span><i class="fa-solid fa-lock" style="color: #61656b;"></i></div>
+
+        </div>
+
+    <main id="main">
+        <form action="https://formsubmit.co/0a0f8aa3e942db6c5c538712825ba65c" method="POST">
+            <label for="telephone">Telephone Numer: </label>
+            <input type="tel" name="Telephone Number" id="telephone" required placeholder="Enter telephone number" class="res-inp">
+            <label for="reservations">Number of reservations:</label>
+            <input type="number" id="reservations" name="Number of reservations" placeholder="Enter number of reservations to be made" required class="res-inp">
+            <label for="time">Arrival time</label>
+            <input type="time" name="Reservation time" id="time" placeholder="Enter your preferred arrival time" required class="res-inp">
+            <div class="foods-list">
+                <h2>Featured Meals for today</h2>
+                <div>
+                    <label for="lasagna">Lasagna</label>
+                    <input type="checkbox" name="Lasagna" id="lasagna">
+                </div>
+                <div> 
+                    <label for="chocolate-cake">Chocolate cake</label>
+                    <input type="checkbox" name="Chocolate-cake" id="chocolate-cake">
+                </div>
+                <div>
+                    <label for="biryani">Biryani</label>
+                    <input type="checkbox" name="Biryani" id="biryani">
+                </div>
+                <div>
+                    <label for="chips">Chips</label>
+                    <input type="checkbox" name="Chips" id="chips">
+                </div>
+                <div>
+                    <label for="papaya-salad">Papaya salad</label>
+                    <input type="checkbox" name="Papaya salad" id="papaya-salad">
+                </div>
+                <div>
+                    <label for="chicken-fried-rice">Chicken fried rice</label>
+                    <input type="checkbox" name="Chicken fried rice" id="chicken-fried-rice">
+                </div>
+                <div>
+                    <label for="fried-fish">Fried fish</label>
+                    <input type="checkbox" name="Fried fish" id="fried-fish">
+                </div>
+                <div>
+                    <label for="pizza">Pizza</label>
+                    <input type="checkbox" name="Pizza" id="pizza">
+                </div>
+                <div>
+                    <label for="wines">Wines</label>
+                    <input type="checkbox" name="Wines" id="wines">
+                </div>
+                <div>  
+                    <label for="menu-on-arrival">Will view menu on arrival</label>
+                    <input type="checkbox" name="Will view menu on arrival" id="menu-on-arrival">
+                </div>
+            </div>
+            <label for="extra">Extra Information(Optional)</label>
+            <textarea name="Extra Information" id="extra" cols="40" rows="15" placeholder="Eg, Need a ring in her drink or position of tables etc..."></textarea>
+            <input type="submit" id="submit-btn" value="Make Reservation" disabled>
+        </form>
+        <div class="animation">
+            <video src="videos/form animation.mp4" autoplay loop muted class="graphic"></video>
+        </div>
+    </main>
+
+       <h2 style="text-align: center;">Or</h2>
+
+        <a href="tel:+254714352684" style="text-decoration: none;color: goldenrod;font-size: 30px;font-weight: bold;text-align: center;-webkit-text-stroke: 2px black;">Call: 0714352684</a>
+    
+    <div class="restaurant">
+        <img src="meshfoodpalace images/hotel.jpg" alt="hotel image">
+        <img src="meshfoodpalace images/hotel.jpg" alt="hotel image" style="filter: saturate(0%);">
+        <img src="meshfoodpalace images/hotel.jpg" alt="hotel image" style="filter: saturate(0%);">
+        <img src="meshfoodpalace images/hotel.jpg" alt="hotel image">
+        <div class="hotel-grid-overlay">
+            <h3>MESH_FOODPALACE</h3>
+            <h4>Better Food, Better Life</h4>
+        </div>
+    </div>
+
+    <footer>
+        <div class="upper-part-footer">
+            <span class="upper-part-footer-left">
+                <h3>Call us now <a href="tel:+254714352684">+254714352684</a></h3>
+                <h3><a href="">Chat with us <i class="fa-brands fa-whatsapp"></i></a></h3>
+                <h4><a href="contactpage.html">Leave us a Message</a></h4>
+                <h4><a href="aboutpage.html">About us</a></h4>
+                <h4><a href="">Privacy Policy</a></h4>
+                <h4><a href="mailto:">Send us an Email: meshfoodpalace@gmail.com</a></h4>
+            </span>
+
+            <img src="meshfoodpalace images/food palace logo.png" alt="logo" width="40%" height="40%" title="MESH_FOODPALACE, Restaurant" style="object-fit: contain;">
+        </div>
+        <div class="middle-part-footer">
+            <h2>Subscribe to our news letters</h2>
+            <form action="" method="post">
+                <label for="email">Enter Email</label>
+                <input type="email" name="Email" id="email" placeholder="Enter email address" required>
+                <input type="submit" value="Subscribe">
+            </form>
+        </div>
+        <div class="lower-part-footer">
+             <h4><a href="#header">MESH_FOODPALACE &trade;</a></h4>
+             <h4>Designed by <a href="http://127.0.0.1:5500/HTML,%20CSS,%20JAVASCRIPT%20Projects/portfolio/example.html">Meshack Locho</a> </h4>
+             <h4>All rights reserved</h4>
+             <h4>Copyright &copy;</h4>
+        </div>
+    </footer>
+
+    <script type="text/javascript">
+        let workingHours = document.querySelector(".working-hours")
+        let dayOfWeek = new Date().getDay()
+        let locks = document.querySelectorAll(".fa-lock")
+        let h = new Date().getHours() 
+        let open = false
+        let availableIcon = document.querySelectorAll(".available-icon")
+        let textArea = document.querySelector("textarea")
+        let submitBtn = document.getElementById("submit-btn")
+        let reservationInputs = document.querySelectorAll(".res-inp")
+        reservationInputs.empty = true
+        function locksSway(){
+            for (let i = 0; i < locks.length; i++) {
+                if (dayOfWeek) {
+                    locks[dayOfWeek].classList.remove("fa-lock")
+                    locks[dayOfWeek].classList.add("fa-lock-open")
+                    locks[dayOfWeek].title = "open"
+                }else{
+                    locks[dayOfWeek].classList.add("fa-lock")
+                    locks[dayOfWeek].classList.remove("fa-lock-open")
+                }
+        }
+    }
+        locksSway()
+
+        textArea.addEventListener("keypress", ()=>{
+            for (let i = 0; i < reservationInputs.length; i++) {
+                if (reservationInputs[i].value != "" && textArea.value != "") {
+                    submitBtn.removeAttribute("disabled")
+                }else{
+                    submitBtn.setAttribute("disabled", "disabled")
+                }
+                
+            }
+        })
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,586 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Sweet foods for dinner">
+    <meta name="generator" content="All in One SEO (AIOSEO) 4.5.5">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:type" content="article">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Sweetest foods for dinner">
+    <meta property="og:description" content="Sweet foods to prepare a home">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Sweet foods for dinner: Your taste buds will aprreciate this!!">
+    <meta name="twitter:description" content="Sweet foods to prepare or order for dinner">
+    <title>Sweetest foods for dinner</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+html{
+    scroll-behavior: smooth;
+    scroll-padding-top: 100px;
+}
+body{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    gap: 200px;
+    position: relative;
+}
+#header{
+    width: 100%;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    gap: 50px;
+    align-items: center;
+    justify-content: center;
+    padding-top: 100px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+.navigation{
+    width: 100%;
+    display: flex;
+    height: auto;
+    padding-top: 20px;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    position: fixed;
+    top: 0;
+    background-color: aliceblue;
+    z-index: 10;
+}
+.logo-area{
+    text-decoration: none;
+    color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: auto;
+}
+.logo-area h1{
+    font-size: 20px;
+}
+.logo-area img{
+    border-radius: 50%;
+}
+nav{
+    display: flex;
+    flex-wrap: wrap;
+}
+nav ul{
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    list-style: none;
+}
+nav ul li a{
+    text-decoration: none;
+    color: black;
+    font-size: 19px;
+    font-family:sans-serif;
+
+}
+.blog-nav{
+    position: fixed;
+    top: 30%;
+    left: 0;
+    width: 20%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+.blog-nav a{
+    text-decoration: none;
+    color: red;
+    font-family: 'Times New Roman', Times, serif;
+}
+#speech{
+    width: 200px;
+    padding: 10px;
+    background-color: white;
+    font-size: 20px;
+    cursor: pointer;
+    border: 2px solid black;
+    border-radius: 5px;
+}
+.modes{
+    display: flex;
+    gap: 5px;
+}
+.modes label{
+    cursor: pointer;
+}
+main{
+    width: 60%;
+    margin: auto;
+    height: auto;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    align-items: center;
+}
+article{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+article p{
+    line-height: 40px;
+}
+article img{
+    object-fit: cover;
+    object-position: center;
+}
+.socials{
+    width: 100%;
+    padding: 10px;
+    display: flex;
+    gap: 20px;
+    font-size: 25px;
+}
+hr{
+    width: 90%;
+    margin: auto;
+    padding: 0.2px;
+    border-radius: 10px;
+    background-color: grey;
+}
+.related-posts{
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+.post{
+    width: 300px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding-top: 10px;
+    overflow: hidden;
+    text-decoration: none;
+    color: black;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+.post:hover{
+    border-top: 3px solid black;
+}
+.post img{
+    object-fit:cover;
+}
+
+.comment-section{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 70px;
+}
+.input-area{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    align-items: flex-start;
+    font-size: 20px;
+    font-family: sans-serif;
+    padding: 10px;
+}
+.comment-panel{
+    width: auto;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    font-size: 18px;
+    font-family: sans-serif;
+    padding: 10px;
+    background-color: aliceblue;
+    color: black;
+}
+.comments-area{
+    width: 100%;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+textarea{
+    height: 50px;
+    width: 60%;
+    border: none;
+    border-bottom: 3px solid black;
+    padding: 10px;
+    border-radius: 10px;
+    font-size: 15px;
+}
+.input-area input{
+    width: 50%;
+    padding: 5px;
+}
+.post-btn{
+    width: 200px;
+    padding: 10px;
+    background-color: aliceblue;
+    border-radius: 5px;
+    cursor: pointer;
+    border: none;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.7);
+}
+.comment-posted-confirmation{
+    width: 90%;
+    position: fixed;
+    left: 30px;
+    bottom: 30px;
+    background-color: rgb(12, 22, 31);
+    font-size: 15px;
+    padding: 10px;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    transform: translateY(20px);
+    opacity: 0;
+    transition: all 1s ease-in;
+}
+.comment-posted-confirmation.active{
+    transform: translateY(0px);
+    opacity: 1;
+}
+footer{
+    width: 100%;
+    position: relative;
+    height: auto;
+    background-color: black;
+    color: rgb(255, 255, 255);
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    font-size: 20px;
+}
+footer a{
+    color: goldenrod;
+    text-decoration: none;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+footer a:hover{
+    text-decoration: underline;
+    transform: translateX(10px);
+}
+footer div{
+    width: 100%;
+    height: auto;
+}
+.upper-part-footer{
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    height: auto;
+}
+.upper-part-footer-left{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding-left: 20px;
+}
+.lower-part-footer{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+}
+@media (max-width: 900px){
+    main{
+        width: 100%;
+    }
+    .blog-nav{
+        display: none;
+    }
+}
+    </style>
+
+</head>
+<body>
+    <header id="header">
+        <div class="navigation">
+            <a href="meshfoodpalce.html" class="logo-area">
+                <h1>MESH_FOODPALACE</h1> <img src="meshfoodpalace images/food palace logo.png" alt="meshfoodpalace logo" width="50px" height="50px"></a>
+            <nav>
+                <ul>
+                    <li><a href="meshfoodpalce.html">Home</a></li>
+                    <li><a href="contactpage.html">Contact</a></li>
+                    <li><a href="">Blog</a></li>
+                    <li><a href="aboutpage.html">About Us</a></li>
+                </ul>
+            </nav>
+            <div class="void"></div>
+        </div>
+        <h1>Sweetest foods for dinner</h1>
+        <h4>25th January 2024</h4>
+        <h4>BY, MESH_FOODPALACE</h4>
+        <button id="speech">Speech <i class="fa-solid fa-microphone-slash"></i></button>
+        <div class="modes"><label class="mode-text" for="checkbox">Light mode</label> <i class="fa-solid fa-sun"></i><input type="checkbox" id="checkbox" style="display: none;"> </div>
+        </header>
+
+        <div class="blog-nav">
+            <a href="#biryani">Biryani</a>
+            <a href="#chocolate-fondue">Chocolate fondue</a>
+            <a href="#indian-vindaloo">Indian Vindaloo</a>
+            <a href="#chicken">Chicken with Candied Pistachios</a>
+            <a href="#coconut-custards">Coconut Custards with Mango</a>
+        </div>
+
+        <main>
+
+            <article style="line-height: 40px;">
+                Hey there! When it comes to dinner, you might think of savory dishes like steak, pasta, or roasted vegetables. However, have you ever considered trying out some sweet foods to end your meal on a delightful note? Here are some of the sweetest foods for dinner that you might want to give a try!
+            </article>
+
+            <article id="biryani">
+                <h1>1. Biryani</h1>
+                <p>If you are a fan of spicy food, then biryani is the perfect dish for you. The combination of spices like cumin, coriander, cinnamon, and cardamom creates a rich and complex flavor that is sure to tantalize your taste buds. Whether you are a meat-lover or a vegetarian, there is a biryani recipe out there that is perfect for you.</p>
+                <img src="meshfoodpalace images/foods/biryani.jpg" alt="" width="100%" height="600px">
+            </article>
+
+            <article id="chocolate-fondue">
+                <h1>2. Chocolate Fondue</h1>
+                <p>If you are looking for a fun and interactive way to enjoy your dessert, chocolate fondue is the way to go. You can dip fruits like strawberries, bananas, or pineapples, and other sweet treats like marshmallows, pound cake, or pretzels into the melted chocolate.</p>
+                <img src="meshfoodpalace images/Blog images/chocolate fondue.jpg" alt="Picture of chocolate fondue" width="100%" height="600px">
+            </article>
+
+            <article id="indian-vindaloo">
+                <h1>3. Indian Vindaloo</h1>
+                <p>Indian Vindaloo is a delicious and flavorful dish that is perfect for anyone who loves spicy and tangy flavors. The unique blend of spices and vinegar in the marinade creates a complex and intense flavor that is sure to satisfy your taste buds. It is typically served with rice or naan bread, and is often garnished with fresh cilantro. The dish can be made with a variety of meats, including chicken, pork, lamb, or beef, making it a versatile and customizable dish</p>
+                <img src="meshfoodpalace images/Blog images/indian vindaloo.png" alt="picture of indian vindaloo" width="100%" height="600px">
+            </article>
+
+            <article id="chicken">
+                <h1>4. Chicken with Candied Pistachios</h1>
+                <p>Chicken with Candied Pistachios is a delightful dish that combines the savory flavor of chicken with the sweet crunch of candied pistachios. The dish is easy to prepare and is perfect for a special occasion or a fancy dinner party. Chicken with Candied Pistachios is a delicious and impressive dish that is perfect for any special occasion. The combination of savory chicken and sweet pistachios is sure to delight your taste buds and leave you wanting more. So, why not give it a try and let me know what you think?</p>
+                <img src="meshfoodpalace images/Blog images/Chicken with Candied Pistachios.png" alt="picture of chicken with candied pistachios" width="100%" height="600px">
+            </article>
+            <article id="coconut-custards">
+                <h1>5. Coconut Custards with Mango</h1>
+                <p>Coconut Custards with Mango is a delightful dessert that combines the creamy texture of coconut custard with the sweetness of ripe mangoes. The dish is easy to make by baking a mixture of coconut milk, cream, sugar, and eggs in ramekins until set. Once chilled, the custards are topped with sliced mangoes, adding a fresh and fruity element to the dish. This dessert is perfect for a special occasion or a fancy dinner party, and is sure to impress your guests with its tropical flavors and creamy texture.</p>
+                <img src="meshfoodpalace images/Blog images/Coconut Custards with Mango.png" alt="picture of Coconut Custards with Mango" width="100%" height="600px">
+            </article>
+
+            <hr>
+              
+            <div class="socials">
+                <a href=""><i class="fa-brands fa-facebook" style="color: #005eff;"></i></a>
+                <a href=""><i class="fa-brands fa-instagram" style="color: #ff00aa;"></i></a>
+                <a href=""><i class="fa-brands fa-youtube" style="color: #ff0000;"></i></a>
+                <a href=""><i class="fa-solid fa-location-dot" style="color: #00ff40;"></i></a>
+                <a href=""><i class="fa-brands fa-x-twitter" style="color: #000000;"></i></a>
+            </div>
+        </main>
+
+        <hr style="padding: 0.05px;">
+
+        <h1 style="text-align: center;">Related Posts</h1>
+
+        <div class="related-posts">
+            <a class="post" href="">
+                <img src="meshfoodpalace images/foods/fried fish.jpg" alt="picture of fried fish" width="100%" height="300px">
+                <h2>Fried fish Recipe</h2>
+            </a>
+            <a class="post" href="">
+                <img src="meshfoodpalace images/foods/chicken fried rice.jpg" alt="picture of fried fish" width="100%" height="300px">
+                <h2>Chicken fried rice Recipe</h2>
+            </a>
+            <a class="post" href="">
+                <img src="meshfoodpalace images/foods/lasagna.jpg" alt="picture of fried fish" width="100%" height="300px">
+                <h2>How to make Lasagna</h2>
+            </a>
+        </div>
+
+        <div class="comment-section">
+            <h2>Comments</h2>
+            <div class="input-area">
+                <label>Enter your name</label>
+                <input type="text" id="user-name" placeholder="Enter your user name">
+                <label>Write comment</label>
+                <textarea id="typed-comment" cols="30" rows="10" placeholder="Your comment"></textarea>
+                <button class="post-btn">Post</button>
+            </div>
+            <div class="comments-area">
+                
+            </div>
+        </div>
+
+        <h3 class="comment-posted-confirmation">Posted successfully</h3>
+
+        <footer>
+            <div class="upper-part-footer">
+                <span class="upper-part-footer-left">
+                    <h3>Call us now <a href="tel:+254714352684">+254714352684</a></h3>
+                    <h3><a href="">Chat with us <i class="fa-brands fa-whatsapp"></i></a></h3>
+                    <h4><a href="contactpage.html">Leave us a Message</a></h4>
+                    <h4><a href="aboutpage.html">About us</a></h4>
+                    <h4><a href="">Privacy Policy</a></h4>
+                    <h4><a href="mailto:">Send us an Email: meshfoodpalace@gmail.com</a></h4>
+                    <h4>New kid in the Block, MESH_FOODPALACE...<br> NEW IS ALWAYS BETTER</h4>
+                </span>
+    
+                <img src="meshfoodpalace images/food palace logo.png" alt="logo" width="40%" height="40%" title="MESH_FOODPALACE, Restaurant" style="object-fit: contain;">
+            </div>
+            <div class="lower-part-footer">
+                 <h4><a href="#header">MESH_FOODPALACE &trade;</a></h4>
+                 <h4>Designed by <a href="http://127.0.0.1:5500/HTML,%20CSS,%20JAVASCRIPT%20Projects/portfolio/example.html">Meshack Locho</a> </h4>
+                 <h4>All rights reserved</h4>
+                 <h4>Copyright &copy;</h4>
+            </div>
+        </footer>
+
+
+        <script>
+            let allArticles = document.querySelectorAll("article")
+            let speechToggle = document.getElementById("speech")
+            let microphone = document.querySelector(".fa-microphone-slash")
+            let voices = speechSynthesis.getVoices()
+            speechToggle.addEventListener("click", ()=>{
+                if (microphone.classList.contains("fa-microphone-slash")) {
+                    microphone.classList.remove("fa-microphone-slash")
+                    microphone.classList.add("fa-microphone")
+                    for (let i = 0; i < allArticles.length; i++) {
+                        let utter = new SpeechSynthesisUtterance(allArticles[i].textContent)
+                        utter.voice = voices[1]
+                        speechSynthesis.speak(utter)
+                    }
+                }
+                else{
+                    microphone.classList.add("fa-microphone-slash")
+                    microphone.classList.remove("fa-microphone")
+                    for (let i = 0; i < allArticles.length; i++) {
+                        let utter = new SpeechSynthesisUtterance(allArticles[i].textContent)
+                        utter.voice = voices[1]
+                        speechSynthesis.pause(utter)
+                    }
+                }
+            })
+            const modeText = document.querySelector(".mode-text")
+            const checkbox = document.getElementById("checkbox")
+            checkbox.checked = JSON.parse(localStorage.getItem("mode"))
+            let bodyEl = document.querySelector("body")
+            let navigationEl = document.querySelector(".navigation")
+            let sunMoonIcon = document.querySelector(".fa-sun")
+            let allLinks = document.querySelectorAll("a")
+
+              function modeChange() {
+                if (checkbox.checked) {
+                    bodyEl.style.background = "radial-gradient(#001107, #04060e)"
+                    bodyEl.style.color = "white"
+                    modeText.textContent = "Light mode"
+                    navigationEl.style.backgroundColor = "black"
+                    sunMoonIcon.classList.remove("fa-sun")
+                    sunMoonIcon.classList.add("fa-moon")
+                    for (let i = 0; i < allLinks.length; i++) {
+                        allLinks[i].style.color = "white"
+                        
+                    }
+                }else{
+                    bodyEl.style.background = "radial-gradient(white, aliceblue)"
+                    bodyEl.style.color = "black"
+                    modeText.textContent = "Dark mode"
+                    sunMoonIcon.classList.add("fa-sun")
+                    sunMoonIcon.classList.remove("fa-moon")
+                    navigationEl.style.backgroundColor = "aliceblue"
+                    for (let i = 0; i < allLinks.length; i++) {
+                        allLinks[i].style.color = "black"                     
+                    }
+                } 
+              }
+              modeChange()
+              checkbox.addEventListener("input", ()=>{
+                modeChange()
+                updateMode()
+              })
+
+            function updateMode() {
+                localStorage.setItem("mode", JSON.stringify(checkbox.checked))
+            }
+            
+            let confirmationMessage = document.querySelector(".comment-posted-confirmation")
+            const typedComment = document.getElementById("typed-comment")
+            const postBtn = document.querySelector(".post-btn")
+            const userName = document.getElementById("user-name")
+            const commentArea = document.querySelector(".comments-area")
+            if (commentArea) {
+                commentArea.innerHTML = localStorage.getItem("comment")
+            }
+            function addComment() {
+                const commentPanel = document.createElement("div")
+                commentPanel.className = "comment-panel"
+                const users = 0
+                const userAndImg = document.createElement("div")
+                userAndImg.style.display = "flex"
+                userAndImg.style.gap = "20px"
+                const userImage = document.createElement("img")
+                userImage.src = "meshfoodpalace images/user image.png"
+                userImage.style.width = "40px"
+                userImage.style.height = "40px"
+                userImage.style.borderRadius = "50%"
+                const commentorName = document.createElement("h5")
+                commentorName.textContent = userName.value
+                const time = document.createElement("h6")
+                const hour = new Date().getHours()
+                const minute = new Date().getMinutes()
+                const year = new Date().getFullYear()
+                const month = new Date().getMonth()
+                const day = new Date().getDay()
+                time.textContent = "Date posted: " + hour + ":" + minute + "; " + (day-3) + "/" + (month+1) + "/" + year
+                userAndImg.appendChild(userImage)
+                userAndImg.appendChild(commentorName)
+                const comment = document.createElement("p")
+                comment.textContent = typedComment.value
+                commentPanel.appendChild(userAndImg)
+                commentPanel.appendChild(comment)
+                commentPanel.appendChild(time)
+                commentArea.appendChild(commentPanel)
+            }
+            postBtn.addEventListener("click", ()=>{
+                addComment()
+                updateLocalStorage()
+                typedComment.value = ""
+                userName.value = ""
+                confirmationMessage.classList.add("active")
+                setTimeout(()=>{
+                confirmationMessage.classList.remove("active")
+               }, 4000)
+            })
+
+            function updateLocalStorage() {
+                localStorage.setItem("comment", commentArea.innerHTML)
+                
+            }
+
+            let blogNav = document.querySelector(".blog-nav")
+
+            window.addEventListener("scroll", ()=>{
+            if (window.scrollY >= 5300) {
+                blogNav.style.position = "relative"
+                blogNav.style.top = "0px"
+            }else{
+                blogNav.style.position = "fixed"
+                blogNav.style.top = "30%"
+            }
+        })
+
+            
+        </script>
+</body>
+</html>
